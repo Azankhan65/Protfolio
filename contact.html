@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us</title>
+  <style>
+    /* General Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Body Styling */
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #f1f1f1; /* Light gray background */
+      padding: 20px;
+      color: #333; /* Dark text color for readability */
+    }
+
+    /* Contact Form Container */
+    .contact-form-container {
+      max-width: 500px;
+      margin: 0 auto;
+      padding: 30px;
+      background-color: #ffffff;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+      border-left: 5px solid #0288d1; /* Sky Blue accent */
+    }
+
+    /* Heading Styling */
+    h2 {
+      text-align: center;
+      font-size: 28px;
+      color: #0288d1; /* Sky Blue */
+      margin-bottom: 20px;
+    }
+
+    /* Form Styling */
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    label {
+      margin-bottom: 8px;
+      font-size: 16px;
+      font-weight: 500;
+      color: #555; /* Dark gray for labels */
+    }
+
+    input, textarea {
+      padding: 12px;
+      margin-bottom: 20px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      transition: all 0.3s ease-in-out;
+    }
+
+    input:focus, textarea:focus {
+      border-color: #0288d1; /* Sky Blue on focus */
+      outline: none;
+      box-shadow: 0 0 8px rgba(2, 136, 209, 0.4); /* Subtle blue glow */
+    }
+
+    /* Submit Button */
+    button {
+      padding: 14px;
+      font-size: 16px;
+      background-color: #0288d1; /* Sky Blue */
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #0277bd; /* Darker Sky Blue on hover */
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .contact-form-container {
+        padding: 20px;
+        margin: 15px;
+      }
+
+      h2 {
+        font-size: 24px;
+      }
+
+      button {
+        padding: 12px;
+      }
+
+      input, textarea {
+        font-size: 14px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .contact-form-container {
+        padding: 15px;
+      }
+
+      h2 {
+        font-size: 20px;
+      }
+
+      input, textarea {
+        font-size: 14px;
+        padding: 10px;
+      }
+
+      button {
+        padding: 10px;
+        font-size: 14px;
+      }
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="contact-form-container">
+    <h2>Contact Us</h2>
+    <form id="contactForm" action="send_mail.php" method="post">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" rows="4" required></textarea>
+
+      <button type="submit">Send Message</button>
+    </form>
+  </div>
+
+</body>
+</html>

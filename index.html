@@ -1,0 +1,444 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="icon" href="./logo2.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            background-color: rgb(167, 212, 255);
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .header {
+            position: relative;
+            text-align: center;
+        }
+
+        .header > img {
+            width: 100%;
+            height: auto;
+        }
+
+        #title {
+            position: absolute;
+            top: 30vh;
+            left: 35%;
+            font-family: 'Salsa', cursive;
+            color: rgb(255, 255, 255);
+            font-size: 2rem;
+        }
+
+        .aboutme {
+            margin-top: 50px;
+            text-align: center;
+        }
+
+        .aboutme > img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+        }
+
+        .aboutme > h3 {
+            font-size: 2.5rem;
+            color: rgb(0, 132, 255);
+        }
+
+        .intro {
+            font-size: 1.3rem;
+            text-align: center;
+            width: 60%;
+            margin: 0 auto;
+        }
+
+        hr {
+            border: dotted rgb(0, 132, 255) 6px;
+            width: 4%;
+            border-bottom: none;
+            margin-top: 50px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .my-skills {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .my-skills > h4 {
+            font-size: 2.4rem;
+            color: rgb(0, 132, 255);
+        }
+
+        .my-skills img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            margin-top: 20px;
+        }
+
+        .my-skills > h5 {
+            font-size: 1.2rem;
+            color: rgb(0, 132, 255);
+        }
+
+        .about-skills {
+            font-size: 1.3rem;
+            text-align: center;
+            width: 60%;
+            margin: 0 auto;
+        }
+
+        .languages {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .languages h4 {
+            font-size: 2.4rem;
+            color: rgb(0, 132, 255);
+        }
+
+        .languages ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            font-size: 2rem;
+            flex-wrap: wrap;
+            padding: 0;
+            margin: 0;
+        }
+
+        .languages li {
+            padding: 20px;
+            border-radius: 50%;
+            transition: transform 0.3s;
+            width: 100px;
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .html {
+            background-color: #E44D26;
+            color: white;
+        }
+
+        .css {
+            background-color: #2965F1;
+            color: white;
+        }
+
+        .js {
+            background-color: #F7DF1E;
+            color: black;
+        }
+
+        .ejs {
+            background-color: #A91E1A;
+            color: white;
+        }
+
+        .nodejs {
+            background-color: #229e11;
+            color: white;
+        }
+
+        .react {
+            background-color: #61DAFB;
+            color: black;
+        }
+
+        .bootstrap {
+            background-color: #563D7C;
+            color: white;
+        }
+
+        .languages li:hover {
+            transform: scale(1.1);
+        }
+
+        .projects {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .projects h4 {
+            font-size: 2.4rem;
+            color: rgb(0, 132, 255);
+        }
+
+        .projects a {
+            display: block;
+            margin-top: 10px;
+            color: rgb(0, 132, 255);
+            font-size: 1.2rem;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .projects a:hover {
+            color: rgb(0, 103, 200);
+        }
+
+        .testimonials {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .testimonials h4 {
+            font-size: 2.4rem;
+            color: rgb(0, 132, 255);
+        }
+
+        .testimonials p {
+            font-size: 1.3rem;
+            width: 60%;
+            margin: 0 auto;
+        }
+
+        .contact {
+            text-align: center;
+            color: rgb(0, 132, 255);
+            margin-top: 50px;
+        }
+
+        .contact > h2 {
+            color: rgb(0, 103, 200);
+        }
+
+        .contact-btn {
+            color: white;
+            width: 150px;
+            height: 40px;
+            border-radius: 5px;
+            background-color: rgb(0, 132, 255);
+            font-size: 1rem;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .contact-btn:hover {
+            background-color: rgb(0, 103, 200);
+        }
+
+        .footer {
+            background-color: rgb(0, 132, 255);
+            margin-top: 50px;
+            padding: 20px;
+        }
+
+        .footer > ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            padding-top: 20px;
+            color: rgb(125, 192, 255);
+        }
+
+        .footer > ul li svg {
+            margin-right: 5px;
+        }
+
+        .footer > p {
+            text-align: center;
+            color: rgb(209, 229, 248);
+            margin-top: 20px;
+        }
+
+        @media (max-width: 768px) {
+            #title {
+                top: 15vh;
+                left: 20%;
+                font-size: 1.5rem;
+            }
+
+            .intro {
+                width: 80%;
+            }
+
+            .about-skills {
+                width: 80%;
+            }
+         
+
+            .languages h4 {
+                font-size: 1.8rem;
+            }
+
+            .languages ul {
+                font-size: 1.5rem;
+                flex-direction: column;
+                gap: 15px;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .languages li {
+                width: 80px;
+                height: 80px;
+                padding: 15px;
+            }
+
+            .projects h4 {
+                font-size: 2rem;
+            }
+
+            .projects a {
+                font-size: 1rem;
+            }
+
+            .testimonials p {
+                font-size: 1.2rem;
+                width: 90%;
+            }
+
+            .contact-btn {
+                width: 100px;
+                height: 35px;
+            }
+
+            .footer > ul {
+                gap: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            #title {
+                top: 10vh;
+                left: 10%;
+                font-size: 1.2rem;
+            }
+
+            .languages h4 {
+                font-size: 1.5rem;
+            }
+
+            .languages ul {
+                font-size: 1.2rem;
+            }
+
+            .languages li {
+                width: 60px;
+                height: 60px;
+                padding: 10px;
+            }
+
+            .intro, .about-skills {
+                width: 90%;
+            }
+
+            .testimonials p {
+                font-size: 1rem;
+                width: 90%;
+            }
+
+            .contact-btn {
+                width: 80px;
+                height: 30px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <img src="./background3.jpg.png" alt="Background Image">
+     
+    </div>
+
+    <div class="aboutme">
+        <img src="./my profile pic.jpeg" alt="My Profile Picture">
+        <h3>Hello, I'm Azan Khan</h3>
+        <div class="intro">
+            <p>I am a 14-year-old student, web developer, business owner, and founder of DELIGHT TRADER LLC. ❤️</p>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="my-skills">
+        <h4>My Skills</h4>
+        <img src="./public/my-skills.jpg" alt="My Skills">
+        <h5>Design & Development</h5>
+        <div class="about-skills">
+            <p>I started learning to code when I was 12 because I wanted to build something for the future. I now aim to be a full-stack developer. ❤️</p>
+            <img src="./public/E-commerce (2).jpg" alt="E-commerce">
+            <h5>E-commerce</h5>
+            <p>I am skilled in running multiple e-commerce stores and managing business operations.</p>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="languages">
+        <h4>Programming Languages I Know</h4>
+        <ul>
+            <li class="html"><i class="fab fa-html5"></i></li>
+            <li class="css"><i class="fab fa-css3-alt"></i></li>
+            <li class="bootstrap"><i class="fab fa-bootstrap"></i></li>
+            <li class="js"><i class="fab fa-js-square"></i></li>
+            <li class="nodejs"><i class="fab fa-node-js"></i></li>
+            <li class="ejs"><i class="fas fa-code"></i></li>
+
+            <li class="react"><i class="fab fa-react"></i></li>
+        </ul>
+    </div>
+
+    <hr>
+
+    <div class="projects">
+        <h4>My Projects</h4>
+        <a href="https://azankhan65.github.io/Currency-converter/" target="_blank">Project 1: Currency Coverter</a>
+        <a href="https://azankhan65.github.io/budget-tracker/" target="_blank">Project 2: Budget tracker</a>
+        <a href="https://azankhan65.github.io/grocery-list/" target="_blank">Project 3: Grocery List</a>
+        <a href="https://azankhan65.github.io/Calculator/" target="_blank">Project 4: Calculator</a>
+
+    </div>
+
+    <hr>
+
+    <div class="testimonials">
+        <h4>What People Say</h4>
+        <p>"Azan is a highly skilled developer with a great understanding of both frontend and backend technologies. His work on my e-commerce website exceeded expectations!" - Client 1</p>
+        <p>"I had the pleasure of working with Azan on a personal project, and he delivered outstanding results. Highly recommend!" - Client 2</p>
+    </div>
+
+    <hr>
+
+    <div class="contact">
+        <h1>Get In Touch</h1>
+        <h2>If you're interested in working with me.</h2>
+        <p>You can learn more about me by clicking "CONTACT US" below.</p>
+        <a href="contact.html"><button class="contact-btn">CONTACT US</button></a>
+    </div>
+
+    <div class="footer">
+        <ul>
+            <li>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitter" viewBox="0 0 16 16">
+                    <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334q.002-.211-.006-.422A6.7 6.7 0 0 0 16 3.542a6.7 6.7 0 0 1-1.889.518 3.3 3.3 0 0 0 1.44-1.814A6.57 6.57 0 0 1 13.411 3c-2.4 0-4.227 2.344-4.227 4.33 0 .342.031.68.095.994-3.522-.158-6.676-1.858-8.779-4.365a4.3 4.3 0 0 0-.572 2.18c0 1.51.768 2.843 1.94 3.618a3.29 3.29 0 0 1-1.928-.507v.051c0 2.094 1.475 3.85 3.41 4.255-1.187.322-2.44.317-3.557-.058 1.193 3.336 4.66 5.757 8.75 5.757z"></path>
+                </svg> Twitter
+            </li>
+            <li>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
+                    <path d="M1 0A1 1 0 0 0 0 1v14a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1V1a1 1 0 0 0-1-1H1zM3.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3zM1 5h3v9H1V5zm4 9V5h10v9H5z"></path>
+                </svg> LinkedIn
+            </li>
+        </ul>
+        <p>© 2024 Azan Khan | All Rights Reserved</p>
+    </div>
+</body>
+
+</html>
